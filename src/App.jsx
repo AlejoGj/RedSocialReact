@@ -1,48 +1,24 @@
-import Navbar from "./components/Navbar"
-import Profile from "./components/Profile"
-import Accordion from "./components/Accordion"
-import Interests from "./components/Interests"
-import AlertBox from "./components/AlertBox"
-import MakeAPost from "./components/MakeAPost"
-import Posts from "./components/Posts"
-import UpcomingEvents from "./components/UpcomingEvents"
-import FriendRequest from "./components/FriendRequest"
-import Ads from "./components/Ads"
-import Bug from "./components/Bug"
-import Footer from "./components/Footer"
+import ChatPage from "./Pages/ChatPage"
+import ConfigurationPage from "./Pages/ConfigurationPage"
+import GroupsPage from "./Pages/GroupsPage"
+import LoginPage from "./Pages/LoginPage"
+import ProfilePage from "./Pages/ProfilePage"
+import RegisterPage from "./Pages/RegisterPage"
+import HomePage from "./Pages/HomePage"
+import { Route, Routes } from "react-router-dom"
 
 export default function App() {
   return (
     <>
-      <Navbar/>
-      <div className="w3-container w3-content" style={{maxWidth:"1400px", marginTop:"80px"}}>
-        <div className="w3-row">
-          <div className="w3-col m3">
-            <Profile/>
-            <br/>
-            <Accordion/>
-            <br/>
-            <Interests/>
-            <br/>
-            <AlertBox/>
-          </div>
-          <div className="w3-col m7">
-            <MakeAPost/>
-            <Posts/>
-          </div>
-          <div className="w3-col m2">
-            <UpcomingEvents/>
-            <br/>
-            <FriendRequest/>
-            <br/>
-            <Ads/>
-            <br/>
-            <Bug/>
-          </div>
-        </div>
-      </div>
-      <br/>
-      <Footer/>
+      <Routes>
+        <Route path="/" element={<LoginPage/>}></Route>
+        <Route path="/Home" element={<HomePage/>}></Route>
+        <Route path="/Register" element={<RegisterPage/>}></Route>
+        <Route path="/Profile" element={<ProfilePage/>}></Route>
+        <Route path="/Chat" element={<ChatPage/>}></Route>
+        <Route path="/Configuration" element={<ConfigurationPage/>}></Route>
+        <Route path="/Groups" element={<GroupsPage/>}></Route>
+      </Routes>
     </>
   )
   

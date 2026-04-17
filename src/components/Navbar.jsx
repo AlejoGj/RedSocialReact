@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar () {
     return (
         <>
             <div className="w3-top">
                 <div className="w3-bar w3-theme-d2 w3-left-align w3-large">
-                <a className="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onClick="openNav()"><i className="fa fa-bars"></i></a>
-                <a href="#" className="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i className="fa fa-home w3-margin-right"></i>Logo</a>
-                <a href="#" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i className="fa fa-globe"></i></a>
-                <a href="#" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i className="fa fa-user"></i></a>
-                <a href="#" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i className="fa fa-envelope"></i></a>
+                <a className="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);"><i className="fa fa-bars"></i></a>
+                <Link to="/Home" className="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i className="fa fa-home w3-margin-right"></i>Logo</Link>
+                <Link to="/Groups" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i className="fa fa-globe"></i></Link>
+                <Link to="/Profile" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i className="fa fa-user"></i></Link>
+                <Link to="/Chat" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i className="fa fa-envelope"></i></Link>
                 <div className="w3-dropdown-hover w3-hide-small">
                     <button className="w3-button w3-padding-large" title="Notifications"><i className="fa fa-bell"></i><span className="w3-badge w3-right w3-small w3-green">3</span></button>     
                     <div className="w3-dropdown-content w3-card-4 w3-bar-block" style={{width:"300px"}}>
@@ -19,8 +20,10 @@ export default function Navbar () {
                     </div>
                 </div>
                 <a href="#" className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-                    <img src="https://www.w3schools.com//w3images/avatar2.png" className="w3-circle" style={{height:"23px", width:"23px"}} alt="Avatar"/>
+                    <img src="https://www.w3schools.com//w3images/avatar2.png" className="w3-circle" style={{"height":"23px", "width":"23px"}} alt="Avatar"/>
                 </a>
+                <Link to="/" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><i className="fa fa-sign-in"></i> Iniciar sesión</Link>
+                <Link to="/Register" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><i className="fa fa-user-plus"></i> Registrarse</Link>
                 </div>
             </div>
             
