@@ -13,10 +13,10 @@ import Accordion from '../components/Accordion'
 import Ads from '../components/Ads'
 import AlertBox from '../components/AlertBox'
 
-export default function HomePage() {
+export default function HomePage({user,onLogout}) {
   return (
     <>
-        <Navbar/>
+        <Navbar user={user} onLogout={onLogout}/>
       <div className="w3-container w3-content" style={{maxWidth:"1400px", marginTop:"80px"}}>
         <div className="w3-row">
           <div className="w3-col m3">

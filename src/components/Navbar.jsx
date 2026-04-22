@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Navbar () {
+export default function Navbar ({user,onLogout}) {
     return (
         <>
             <div className="w3-top">
@@ -19,9 +19,9 @@ export default function Navbar () {
                     <a href="#" className="w3-bar-item w3-button">Jane likes your post</a>
                     </div>
                 </div>
-                <a href="#" className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-                    <img src="https://www.w3schools.com//w3images/avatar2.png" className="w3-circle" style={{"height":"23px", "width":"23px"}} alt="Avatar"/>
-                </a>
+                <button onClick={onLogout} className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+                    {user} <img src="https://www.w3schools.com//w3images/avatar2.png" className="w3-circle" style={{"height":"23px", "width":"23px"}} alt="Avatar"/>
+                </button>
                 <Link to="/" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><i className="fa fa-sign-in"></i> Iniciar sesión</Link>
                 <Link to="/Register" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"><i className="fa fa-user-plus"></i> Registrarse</Link>
                 </div>
